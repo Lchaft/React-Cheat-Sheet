@@ -91,3 +91,10 @@ Hello World React Component Example:
                 }
 
                 export default Hello
+
+Broken down into little parts...
+
+* class Hello: this is the component, in this case the component is called "Hello"
+* extends Component: tells the newly created class to inherit the component definition of a class
+* render: this method creates a virtual DOM
+* export default Hello: exports or "exposes the Hello class to other files"
