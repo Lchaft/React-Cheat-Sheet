@@ -21,9 +21,12 @@ Steps to building a react app: (from: https://reactjs.org/docs/thinking-in-react
     * props are a way of passing data from parent to child
     * DO NOT USE STATE YET
     * components will only have render methods here
-4.        Identify minimal (but complete) representation of the user iterface state
-        - to make UI interactive, you need to be able to trigger changes to your underlying data model
-        - narrow down which items need to be updated with state
+4.  Identify minimal (but complete) representation of the user iterface state
+
+* to make UI interactive, you need to be able to trigger changes to your underlying data model
+
+- narrow down which items need to be updated with state
+
 5.  Figure out where state should go
 
     * For each piece of state in your application:
