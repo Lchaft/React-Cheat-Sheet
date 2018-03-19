@@ -4,21 +4,21 @@ What is React?
 
 React Component Example:
 
-class ShoppingList extends React.Component {
-render() {
-return (
+                class ShoppingList extends React.Component {
+                render() {
+                return (
 
-<div className="shopping-list">
-<h1>Shopping List for {this.props.name}</h1>
-<ul>
-<li>Instagram</li>
-<li>WhatsApp</li>
-<li>Oculus</li>
-</ul>
-</div>
-);
-}
-}
+                <div className="shopping-list">
+                <h1>Shopping List for {this.props.name}</h1>
+                <ul>
+                <li>Instagram</li>
+                <li>WhatsApp</li>
+                <li>Oculus</li>
+                </ul>
+                </div>
+                );
+                }
+                }
 
 * ShoppingList is a React component class
 * A component takes in parameters called props and returns views to display via render (a method)
