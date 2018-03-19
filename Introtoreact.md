@@ -98,3 +98,70 @@ Broken down into little parts...
 * extends Component: tells the newly created class to inherit the component definition of a class
 * render: this method creates a virtual DOM
 * export default Hello: exports or "exposes the Hello class to other files"
+
+What is JSX?
+
+* a langauge that compiles to Javascript & looks like HTML
+
+What's the Virtual Dom?
+
+* "The Virtual DOM is a Javascript representation of the actual DOM. The virtual DOM is a staging area for changes that will eventually be implemented.
+* can keep track of changes in the DOM and compare instances
+
+How to make things a little more dynamic( or not hard-coded)?
+
+1.  pass in data where we are rendering our component (using same example, in src/index.js):
+
+                 import React from 'react'
+                 import ReactDOM from 'react-dom'
+                 import Hello from './App.js'
+
+                 ReactDOM.render(
+                 <Hello name={"Nick"} />,
+                 document.getElementById('root')
+                 )
+
+2.  in component definition, replace "world" with this.props.name:
+
+                 class Hello extends Component {
+                 render () {
+                     return (
+                     <h1>Hello {this.props.name}</h1>
+                     )
+                 }
+                 }
+
+What are .props?
+
+* .props = properties
+* props = immutable (can't be changed)
+* props are defined in dev and then passed in as attributes to JSX element in the render method
+
+How to work with .props?
+
+1.  still in src/index.js add in another prop (age):
+    import React from 'react';
+    import ReactDOM from 'react-dom'
+    import Hello from './App.js'
+
+                 ReactDOM.render(
+                 <Hello name={"Nick"} age={24} />,
+                 document.getElementById('root')
+                 )
+
+2.  back in the component definition add...
+    class Hello extends Component {
+    render () {
+    return (
+
+                    <div>
+
+                <h1>Hello {this.props.name}</h1>
+
+            <p>You are {this.props.age} years old</p>
+
+        </div>
+
+    )
+    }
+    }
